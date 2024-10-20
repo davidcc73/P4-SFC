@@ -1,6 +1,7 @@
 # ReadMe
 
-This repository is a fork of project [p4-sfc](https://github.com/multip4/P4-SFC), just contains the necessary to run the BMv2 version of the P4 code.
+This repository is a fork of project [p4-sfc](https://github.com/multip4/P4-SFC), it has some bug/inconsistenciy fixes, and 
+contains the necessary parts to run the BMv2 version of the P4 code.
 
 It is a version of the same project but already inserted in the directories of [p4lang/tutorials](https://github.com/p4lang/tutorials), because of it's dependencies, making it ready to run on the VMs available at  [p4lang/tutorials](https://github.com/p4lang/tutorials) (most recent version at 20/10/2024)
 
