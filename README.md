@@ -6,7 +6,7 @@ It is a version of the same project but already inserted in the directories of [
 
 
 ## Topology
-![Topology](images\topology.drawio.png "Topology")
+![Topology](images/topology.drawio.png "Topology")
 
 
 
