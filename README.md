@@ -1,9 +1,9 @@
 # ReadMe
 
-This repository is a fork of project [p4-sfc](https://github.com/multip4/P4-SFC), it has some bug/inconsistenciy fixes, and 
+This repository is a fork of project [p4-sfc](https://github.com/multip4/P4-SFC), it has some bug/inconsistencies fixes, and 
 contains the necessary parts to run the BMv2 version of the P4 code.
 
-It is a version of the same project but already inserted in the directories of [p4lang/tutorials](https://github.com/p4lang/tutorials), because of it's dependencies, making it ready to run on the VMs available at  [p4lang/tutorials](https://github.com/p4lang/tutorials) (most recent version at 20/10/2024)
+It is a version of the same project but already inserted in the directories of [p4lang/tutorials](https://github.com/p4lang/tutorials), because of its dependencies, making it ready to run on the VMs available at  [p4lang/tutorials](https://github.com/p4lang/tutorials) (most recent version at 20/10/2024), or any other system that fulfills the same requirements.
 
 
 ## Topology
@@ -12,9 +12,9 @@ It is a version of the same project but already inserted in the directories of [
 
 
 ## Fixes
-There were inconsistencies in what was refered as `TOS` and `DSCP` in the project, now they are consitent:
+There were inconsistencies in what was referred to as `TOS` and `DSCP` in the project, but now they are consistent:
 
-* For the P4 code and its .json files with table entries, `TOS` was just the 6 LMS bits of `TOS`, which is `DSCP`, while the remaining 2 bits we correctly assigned as `ECN`. So in the P4 code, the `TOS` field was changed to what the field actually is, the `DSCP` field.
+* For the P4 code and its .json files with table entries, `TOS` was just the 6 LMS bits of `TOS`, which is `DSCP`, while the remaining 2 bits were correctly assigned as `ECN`. So in the P4 code, the `TOS` field was changed to what the field actually is, the `DSCP` field.
 
 * For Python, the `send.py` demanded a `TOS` value to use in the packes, and by doing that, it manipulated the `ECN`, which is used to do congestion control at run time, so it was changed to ask for just the `DSCP` value.
 
